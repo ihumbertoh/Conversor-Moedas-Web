@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conversor de Moedas</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Conversor de Moedas</h1>
+        <form method="POST">
+            <label>Valor:</label>
+            <input type="text" name="amount" required>
+            <label>Taxa de câmbio:</label>
+            <input type="text" name="rate" required>
+            <button type="submit">Converter</button>
+        </form>
+        {% if result is not none %}
+            <h2>Resultado: {{ result }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
